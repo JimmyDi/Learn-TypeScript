@@ -31,10 +31,10 @@ num = null;
 // void
 let noReturn = () => {}
 
-let x
-x = 1
-x = []
-x = () => {}
+// let x
+// x = 1
+// x = []
+// x = () => {}
 
 let error = () => {
     throw new Error('error');
