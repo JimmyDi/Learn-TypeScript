@@ -298,10 +298,10 @@ console.log(getValues(obj, ['a', 'b']));
 // console.log(getValues(obj, ['e', 'f']));
 
 // keyof T
-interface Obj {
-    a: number,
-    b: string
-}
+// interface Obj {
+//     a: number,
+//     b: string
+// }
 
 let key: keyof Obj;
 
@@ -309,3 +309,19 @@ let key: keyof Obj;
 let value: Obj['a']
 
 // T extends U
+
+
+interface Obj {
+    a: string;
+    b: number;
+    c: boolean; 
+}
+
+type ReadonlyObj  = Readonly<Obj>;
+
+type PartialObj = Partial<Obj>;
+
+type PickObj = Pick<Obj, 'a' | 'b'>;
+
+type RecordObj = Record<'x' | 'y', Obj>
+
