@@ -15,8 +15,8 @@ console.log(tuple)
 let compute: (x: number, y: number) => number;
 compute = (a, b) => a + b;
 
-let obj: {x: number, y: number} = {x: 1, y: 2};
-obj.x = 3;
+// let obj: {x: number, y: number} = {x: 1, y: 2};
+// obj.x = 3;
 
 let s1: symbol = Symbol();
 let s2 = Symbol();

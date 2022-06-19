@@ -18,8 +18,8 @@ let foo: Foo = {
 
 // foo.bar = 1;
 
-let s: string = 's';
-s = null;
+// let s: string = 's';
+// s = null;
 
 interface X {
     a: any;
@@ -49,18 +49,18 @@ hof(handler1);
 let handler2 = (a: number, b: number, c: number) => {};
 // hof(handler2);
 
-let a1 = (p1: number, p2: number) => {};
-let b1 = (p1?: number, p2?: number) => {};
-let c1 = (...args: number[]) => {};
+// let a1 = (p1: number, p2: number) => {};
+// let b1 = (p1?: number, p2?: number) => {};
+// let c1 = (...args: number[]) => {};
 
-a1 = b1;
-a1 = c1;
+// a1 = b1;
+// a1 = c1;
 
-b1 = c1;
-b1 = a1;
+// b1 = c1;
+// b1 = a1;
 
-c1 = a1;
-c1 = b1;
+// c1 = a1;
+// c1 = b1;
 
 // 2) 参数类型　
 let handler3 = (a: string) => {
@@ -80,11 +80,11 @@ interface Point2D {
     y: number;
 }
 
-let p3d = (point: Point3D) => {};
-let p2d = (point: Point2D) => {};
+// let p3d = (point: Point3D) => {};
+// let p2d = (point: Point2D) => {};
 
-p3d = p2d;
-p2d = p3d;
+// p3d = p2d;
+// p2d = p3d;
 
 //3) 返回值类型
 let f1 = () => ({name: 'Alice'});
@@ -282,3 +282,30 @@ function area(s: Shape) {
 }
 
 console.log(area({kind: 'circle', r: 1}));
+
+
+let obj = {
+    a: 1,
+    b: 2,
+    c: 3
+}
+
+function getValues<T, K extends keyof T>(obj: T, keys: K[]): T[K][] {
+    return keys.map(key => obj[key]);
+}
+
+console.log(getValues(obj, ['a', 'b']));
+// console.log(getValues(obj, ['e', 'f']));
+
+// keyof T
+interface Obj {
+    a: number,
+    b: string
+}
+
+let key: keyof Obj;
+
+// T[k]
+let value: Obj['a']
+
+// T extends U
