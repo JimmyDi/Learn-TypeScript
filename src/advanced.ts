@@ -1,4 +1,4 @@
-let a = 1;
+// let a = 1;
 let b = [1, null];
 
 // let c = (x = 1) => x + 1;
@@ -231,7 +231,7 @@ let pet: DogInterface & CatInterface = {
 
 let a2: number | string = 'a';
 let b2: 'a' | 'b' | 'c';
-let c2: 1 | 2 | 3;
+// let c2: 1 | 2 | 3;
 
 class Dog implements DogInterface {
     run() {};
