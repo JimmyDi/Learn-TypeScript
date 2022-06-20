@@ -1,6 +1,6 @@
-let a = {
-    x: 1,
-    y: 2
-};
+// let a = {
+//     x: 1,
+//     y: 2
+// };
 
-module.exports = a; 
+// module.exports = a; 

@@ -98,20 +98,20 @@ function overload(a: string, b: string): string;
 function overload(a: any, b: any): any {};
 
 // 枚举兼容性
-enum Fruit { Apple, Banana };
-enum Color { Red, Yellow };
-let fruit: Fruit.Apple = 3;
-let no: number = Fruit.Apple;
+// enum Fruit { Apple, Banana };
+// enum Color { Red, Yellow };
+// let fruit: Fruit.Apple = 3;
+// let no: number = Fruit.Apple;
 
 // let color: Color.Red = Fruit.Apple;
 
 // 类兼容性
 
-class A {
-    constructor(p: number, q: number) {};
-    id: number = 1;
-    private name: string = '';
-}
+// class A {
+//     constructor(p: number, q: number) {};
+//     id: number = 1;
+//     private name: string = '';
+// }
 
 class B {
     static s = 1;
@@ -120,16 +120,16 @@ class B {
     private name: string = '';
 }
 
-let aa = new A(1, 2);
-let bb = new B(1);
+// let aa = new A(1, 2);
+// let bb = new B(1);
 
 // aa = bb;
 // bb = aa;
 
-class C extends A {}
-let cc = new C(1, 2);
-aa = cc;
-cc = aa;
+// class C extends A {}
+// let cc = new C(1, 2);
+// aa = cc;
+// cc = aa;
 
 // 泛型兼容性
 interface Empty<T> {
