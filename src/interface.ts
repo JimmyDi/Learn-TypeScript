@@ -39,7 +39,7 @@ interface Names {
 }
 
 
-let add: (x: number, y: number) => number;
+// let add: (x: number, y: number) => number;
 
 // interface Add {
 //     (x: number, y: number): number
